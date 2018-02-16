@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewYear</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment_a">fragment A</string>
+    <string name="fragment_b">fragment B</string>
+    <string name="fragment_main">fragment main</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

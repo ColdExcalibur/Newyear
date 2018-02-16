@@ -1,0 +1,19 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EF85"
+    tools:context="com.example.administrator.newyear.MainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="72sp"
+        android:text="@string/fragment_main" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/for_a_fragment"></FrameLayout>
+
+</FrameLayout>
