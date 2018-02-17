@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,9 +18,11 @@ import android.view.ViewGroup
  * Use the [MainFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MainFragment : Fragment() ,AFragment.OnFragmentInteractionListener{
+class MainFragment : Fragment() ,AFragment.OnFragmentInteractionListener, ListFragment.OnButtonsClickListener{
     override fun onFragmentInteraction(uri : Uri){}
-
+    override fun onButtonsClick(int: Int) {
+        Log.d("MainFragment", "$int")
+    }
     // TODO: Rename and change types of parameters
     private var mParam1: String? = null
     private var mParam2: String? = null
@@ -33,8 +36,9 @@ class MainFragment : Fragment() ,AFragment.OnFragmentInteractionListener{
             mParam2 = arguments.getString(ARG_PARAM2)
         }
         childFragmentManager.beginTransaction()
-                .replace(R.id.for_a_fragment, AFragment())
+                .replace(R.id.for_content_fragment, AFragment())
                 .replace(R.id.for_list_fragment, ListFragment())
+                .replace(R.id.for_test_fragment, TestFragment())
                 .commit()
     }
 

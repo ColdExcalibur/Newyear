@@ -35,7 +35,7 @@
         />
 
     <FrameLayout
-        android:id="@+id/for_a_fragment"
+        android:id="@+id/for_content_fragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/colorWhite"
@@ -44,4 +44,14 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/for_list_fragment" />
+    <FrameLayout
+        android:id="@+id/for_test_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
 </android.support.constraint.ConstraintLayout>

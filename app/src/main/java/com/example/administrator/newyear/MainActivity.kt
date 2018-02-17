@@ -7,7 +7,9 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : Activity() ,MainFragment.OnFragmentInteractionListener{
-    override fun onFragmentInteraction(uri : Uri){}
+    override fun onFragmentInteraction(uri : Uri){
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
