@@ -12,13 +12,12 @@ import android.view.ViewGroup
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [MainFragment.OnFragmentInteractionListener] interface
+ * [EnvironmentFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [MainFragment.newInstance] factory method to
+ * Use the [EnvironmentFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MainFragment : Fragment() ,AFragment.OnFragmentInteractionListener{
-    override fun onFragmentInteraction(uri : Uri){}
+class EnvironmentFragment : Fragment() {
 
     // TODO: Rename and change types of parameters
     private var mParam1: String? = null
@@ -32,16 +31,12 @@ class MainFragment : Fragment() ,AFragment.OnFragmentInteractionListener{
             mParam1 = arguments.getString(ARG_PARAM1)
             mParam2 = arguments.getString(ARG_PARAM2)
         }
-        childFragmentManager.beginTransaction()
-                .replace(R.id.for_a_fragment, AFragment())
-                .replace(R.id.for_list_fragment, ListFragment())
-                .commit()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_environment, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -91,11 +86,11 @@ class MainFragment : Fragment() ,AFragment.OnFragmentInteractionListener{
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment MainFragment.
+         * @return A new instance of fragment EnvironmentFragment.
          */
         // TODO: Rename and change types and number of parameters
-        fun newInstance(param1: String, param2: String): MainFragment {
-            val fragment = MainFragment()
+        fun newInstance(param1: String, param2: String): EnvironmentFragment {
+            val fragment = EnvironmentFragment()
             val args = Bundle()
             args.putString(ARG_PARAM1, param1)
             args.putString(ARG_PARAM2, param2)
